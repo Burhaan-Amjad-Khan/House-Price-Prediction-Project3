@@ -1,10 +1,10 @@
 import streamlit as st
 import numpy as np
 import joblib
+import os
 
-# Load model & scaler
-model = joblib.load("california_model.pkl")
-scaler = joblib.load("scaler.pkl")
+model = joblib.load(os.path.join(os.getcwd(), "california_model.pkl"))
+scaler = joblib.load(os.path.join(os.getcwd(), "scaler.pkl"))
 
 st.title("California House Price Prediction")
 
